@@ -1,6 +1,6 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.35.1.
+-- This file has been generated from package.yaml by hpack version 0.37.0.
 --
 -- see: https://github.com/sol/hpack
 
@@ -39,7 +39,6 @@ library
     , flatparse
     , text
     , time
-    , bytestring
   default-language: Haskell2010
 
 executable fast-time-bench
@@ -56,7 +55,6 @@ executable fast-time-bench
     , flatparse
     , text
     , time
-    , bytestring
   default-language: Haskell2010
 
 executable fast-time-exe
@@ -88,5 +86,4 @@ test-suite fast-time-test
     , flatparse
     , text
     , time
-    , bytestring
   default-language: Haskell2010
