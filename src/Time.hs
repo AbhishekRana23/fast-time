@@ -13,7 +13,7 @@ import Time.Parser as X
 import qualified Data.ByteString.Char8 as B
 
 parseTime :: Text -> String -> Maybe UTCTime
-parseTime format stringifiedDate = go $ runParser parser (FB.strToUtf8 stringifiedDate)
+parseTime format stringifiedDate = go $ FB.runParser parser (FB.strToUtf8 stringifiedDate)
   where
     parser
       | format == "%Y-%m-%dT%k:%M:%SZ" ||
@@ -29,7 +29,7 @@ parseTime format stringifiedDate = go $ runParser parser (FB.strToUtf8 stringifi
     go _ = Nothing
 
 parseLTime :: Text -> String -> Maybe LocalTime 
-parseLTime format stringifiedDate = go $ runParser parser (FB.strToUtf8 stringifiedDate)
+parseLTime format stringifiedDate = go $ FB.runParser parser (FB.strToUtf8 stringifiedDate)
   where
     parser 
       |  format == "%Y-%m-%dT%k:%M:%S%Q%Ez" =

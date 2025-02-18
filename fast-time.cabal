@@ -39,6 +39,7 @@ library
     , flatparse
     , text
     , time
+    , bytestring
   default-language: Haskell2010
 
 executable fast-time-bench
